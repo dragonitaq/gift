@@ -1,0 +1,61 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+
+  &__logo {
+    width: 6rem;
+    margin-right: auto;
+    margin-left: 3rem;
+  }
+
+  &__buttons {
+    display: flex;
+    padding: 2rem;
+
+    & > * {
+      margin-right: 4rem;
+    }
+  }
+
+  &__btn-link:link,
+  &__btn-link:visited {
+    font-size: 1.8rem;
+    padding-bottom: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $primary-color;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+  }
+
+  &__btn-link:hover,
+  &__btn-link:active {
+    border-bottom: 2px solid $secondary-color;
+  }
+
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+    fill: currentColor;
+    margin-right: 0.7rem;
+  }
+
+  &__btn-home {
+  }
+
+  &__btn-gift {
+  }
+
+  &__btn-delivery {
+  }
+
+  &__btn-about {
+  }
+
+  &__btn_contact {
+  }
+}

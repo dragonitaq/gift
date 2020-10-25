@@ -1,0 +1,52 @@
+/* ################################ Variables ############################### */
+/* ########################## Media query variables ######################### */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem; }
+  .nav__logo {
+    width: 6rem;
+    margin-right: auto;
+    margin-left: 3rem; }
+  .nav__buttons {
+    display: flex;
+    padding: 2rem; }
+    .nav__buttons > * {
+      margin-right: 4rem; }
+  .nav__btn-link:link, .nav__btn-link:visited {
+    font-size: 1.8rem;
+    padding-bottom: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #CA8ACA;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s; }
+  .nav__btn-link:hover, .nav__btn-link:active {
+    border-bottom: 2px solid #FEDD00; }
+  .nav__icon {
+    width: 3rem;
+    height: 3rem;
+    fill: currentColor;
+    margin-right: 0.7rem; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  max-width: 1800px;
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 400;
+  line-height: 1.5; }
