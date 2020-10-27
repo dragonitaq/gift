@@ -22,6 +22,24 @@
     width: 5rem;
     margin-right: 2rem;
     margin-left: 5.5rem;
+
+    @include respond(bp-1050) {
+      width: 4rem;
+    }
+
+    @include respond(bp-750) {
+      width: 3.5rem;
+      margin-left: 2rem;
+    }
+    
+    @include respond(bp-600) {
+      width: 4rem;
+      margin-right: 1rem;
+    }
+
+    @include respond(bp-450) {
+      width: 5rem;
+    }
   }
 
   &__company-name:link,
@@ -29,6 +47,22 @@
     text-decoration: none;
     font-size: 4rem;
     color: $primary-color;
+
+    @include respond(bp-1050) {
+      font-size: 3rem;
+    }
+
+    @include respond(bp-750) {
+      font-size: 2.5rem;
+    }
+
+    @include respond(bp-600) {
+      font-size: 3rem;
+    }
+
+    @include respond(bp-450) {
+      display: none;
+    }
   }
 
   &__company:hover,
@@ -42,6 +76,14 @@
 
     & > * {
       margin-right: 2.5rem;
+
+      @include respond(bp-1050) {
+        margin-right: 1.5rem;
+      }
+
+      @include respond(bp-900) {
+        margin-right: 1rem;
+      }
     }
 
     /* I want select all childs but not 6th & 7th, below code doesn't work. Why? */
@@ -72,33 +114,83 @@
     color: darken($primary-color, 20%);
   }
 
+  &__btn-link span {
+    @include respond(bp-600) {
+      display: none;
+    }
+  }
+
   &__icon {
     width: 3rem;
     height: 3rem;
     fill: currentColor;
     margin-right: 0.7rem;
+    
+    @include respond(bp-600) {
+      margin-right: 1.2rem;
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+    
+    @include respond(bp-450) {
+      width: 3.8rem;
+      height: 3.8rem;
+    }
   }
 
   &__divider {
     background-color: $secondary-color;
     width: 2px;
+    
+    @include respond(bp-600) {
+      margin-right: 1.5rem;
+      width: 1px;
+    }
+    
+    @include respond(bp-450) {
+      margin-right: 2rem;
+    }
   }
 
   &__language {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // margin-right: 1rem;
+
+    @include respond(bp-600) {
+      flex-direction: row;
+      align-items: center;
+    }
 
     &-dash {
       background-color: $primary-color;
       height: 1px;
+
+      @include respond(bp-600) {
+        display: none;
+      }
+    }
+
+    &-slash {
+      display: none;
+
+      @include respond(bp-600) {
+        display: inherit;
+        font-size: 2rem;
+        color: $primary-color;
+        margin-left: 3px;
+        margin-right: 3px;
+      }
     }
 
     &-choice {
       color: #fff;
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       text-decoration: none;
+
+      @include respond(bp-600) {
+        font-size: 2rem;
+      }
     }
   }
 }

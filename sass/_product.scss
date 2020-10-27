@@ -3,16 +3,44 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 8rem;
+  background-position: center;
+  padding: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  @include respond(bp-900) {
+    padding: 5rem;
+  }
 
   &___display {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 10rem;
     padding: 8rem;
+    width: 100%;
+    height: 100%;
+
+    @include respond(bp-1050) {
+      grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+      gap: 5rem;
+    }
+    
+    @include respond(bp-900) {
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      gap: 3rem;
+      padding: 3rem;
+    }
+
+    @include respond(bp-600) {
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      padding: 1rem;
+    }
+    
+    @include respond(bp-450) {
+      grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+      margin-bottom: 2rem;
+    }
   }
 
   &__card {
@@ -22,6 +50,10 @@
     padding: 2rem;
     background-image: linear-gradient(to bottom, $primary-color 0%, $tertiary-color 100%);
     border-radius: 1rem;
+
+    @include respond(bp-1050) {
+      padding: 1.2rem;
+    }
   }
 
   &__img {
@@ -49,7 +81,7 @@
 
   &__code::before,
   &__code::after {
-    content: "";
+    content: '';
     display: block;
     height: 2px;
     width: 8rem;
@@ -57,14 +89,22 @@
   }
 
   &__more {
+    background-image: linear-gradient(to right, $primary-color 0%, $tertiary-color 100%);
     font-size: 1.8rem;
     text-transform: uppercase;
     text-decoration: none;
-    color: $primary-color;
-    perspective: 100px;
-    transition: transform 0.3s cubic-bezier(.78,.13,.32,.89);
+    border-radius: 5rem;
+    padding: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    color: #000;
+    transition: transform 0.3s cubic-bezier(0.78, 0.13, 0.32, 0.89);
+
+    @include respond(bp-600) {
+      margin-top: 3rem;
+    }
   }
-  
+
   &__more:hover {
     transform: scale(1.1);
   }

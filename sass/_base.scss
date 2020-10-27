@@ -12,6 +12,22 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @include respond(bp-1050) {
+    font-size: 58%;
+  }
+  @include respond(bp-900) {
+    font-size: 52%;
+  }
+  @include respond(bp-750) {
+    font-size: 45%;
+  }
+  @include respond(bp-600) {
+    font-size: 40%;
+  }
+  @include respond(bp-450) {
+    font-size: 35%;
+  }
 }
 
 body {
