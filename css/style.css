@@ -1,37 +1,5 @@
 /* ################################ Variables ############################### */
 /* ########################## Media query variables ######################### */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem; }
-  .nav__logo {
-    width: 6rem;
-    margin-right: auto;
-    margin-left: 3rem; }
-  .nav__buttons {
-    display: flex;
-    padding: 2rem; }
-    .nav__buttons > * {
-      margin-right: 4rem; }
-  .nav__btn-link:link, .nav__btn-link:visited {
-    font-size: 1.8rem;
-    padding-bottom: 2px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #CA8ACA;
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s; }
-  .nav__btn-link:hover, .nav__btn-link:active {
-    border-bottom: 2px solid #FEDD00; }
-  .nav__icon {
-    width: 3rem;
-    height: 3rem;
-    fill: currentColor;
-    margin-right: 0.7rem; }
-
 * {
   padding: 0;
   margin: 0; }
@@ -50,3 +18,367 @@ body {
   font-family: 'Oxygen', sans-serif;
   font-weight: 400;
   line-height: 1.5; }
+
+::selection {
+  background-color: #CA8ACA;
+  color: #FFF9C0; }
+
+.section-heading {
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  background-image: linear-gradient(to bottom, #CA8ACA 50%, #FEDD00 95%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; }
+
+/* ################################ Version 1 ############################### */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.8rem; }
+  .cta__products {
+    display: inline-block; }
+  .cta__products:link, .cta__products:visited {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    margin-right: 3rem;
+    padding: 0.7rem 1.2rem;
+    background-color: #FFF9C0;
+    border-radius: 10rem;
+    box-shadow: 1px 1px 1rem 1px rgba(100, 100, 100, 0.8);
+    transition: all 0.3s; }
+  .cta__products:hover, .cta__products:focus {
+    transform: translateY(-5px);
+    box-shadow: 1px 1px 2rem 1px rgba(100, 100, 100, 0.8); }
+  .cta__buy {
+    display: flex;
+    align-items: center; }
+  .cta__buy:link, .cta__buy:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    padding: 0.7rem 1.2rem;
+    background-color: #CA8ACA;
+    border-radius: 10rem;
+    box-shadow: 1px 1px 1rem 1px rgba(100, 100, 100, 0.8);
+    transition: all 0.3s; }
+    .cta__buy:link > span, .cta__buy:visited > span {
+      margin-right: 0.5rem; }
+  .cta__buy:hover, .cta__buy:focus {
+    transform: translateY(-5px);
+    box-shadow: 1px 1px 2rem 1px rgba(100, 100, 100, 0.8); }
+  .cta__icon {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem; }
+
+/* ################################ Version 2 ############################### */
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem;
+  /* It seems no shadow is better. */
+  background-color: #252525;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0; }
+  .nav__company {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s; }
+  .nav__company-logo {
+    width: 5rem;
+    margin-right: 2rem;
+    margin-left: 5.5rem; }
+  .nav__company-name:link, .nav__company-name:visited {
+    text-decoration: none;
+    font-size: 4rem;
+    color: #CA8ACA; }
+  .nav__company:hover, .nav__company:focus {
+    transform: scale(1.1) translateY(1.5px); }
+  .nav__buttons {
+    display: flex;
+    padding: 1rem;
+    /* I want select all childs but not 6th & 7th, below code doesn't work. Why? */ }
+    .nav__buttons > * {
+      margin-right: 2.5rem; }
+  .nav__btn-link:link, .nav__btn-link:visited {
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #CA8ACA;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s; }
+  .nav__btn-link:hover, .nav__btn-link:focus, .nav__btn-link:active {
+    border-bottom: 2px solid #FEDD00;
+    transform: scale(1.1);
+    color: #a44aa4; }
+  .nav__icon {
+    width: 3rem;
+    height: 3rem;
+    fill: currentColor;
+    margin-right: 0.7rem; }
+  .nav__divider {
+    background-color: #FEDD00;
+    width: 2px; }
+  .nav__language {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .nav__language-dash {
+      background-color: #CA8ACA;
+      height: 1px; }
+    .nav__language-choice {
+      color: #fff;
+      font-size: 1.2rem;
+      text-decoration: none; }
+
+.hero {
+  background-image: linear-gradient(to left, rgba(102, 18, 102, 0.75) 5%, rgba(202, 138, 202, 0.5) 50%, rgba(202, 138, 202, 0.5) 100%), url("../img/hero-bg.jpg");
+  height: calc(100vh - 68px);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  margin-top: 68px; }
+  .hero__wording {
+    padding: 1.5rem 5rem; }
+  .hero__heading {
+    font-size: 10em;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    display: inline-block;
+    background-image: linear-gradient(to right, #CA8ACA 20%, #FFF9C0 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; }
+  .hero__paragraph {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    text-shadow: 3px 3px 15px rgba(100, 100, 100, 0.8); }
+
+.about {
+  background-image: url("../img/about-bg.jpg");
+  height: 75vh;
+  background-size: cover; }
+  .about__clipper {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    clip-path: circle(70.7% at 0% 50%); }
+  .about__content {
+    height: 100%;
+    width: 50%;
+    padding: 0rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+    .about__content h3 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-style: italic;
+      letter-spacing: 1px; }
+  .about__description {
+    font-size: 1.4rem; }
+
+.idea {
+  background-image: url("../img/idea-bg.jpg");
+  height: 75vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -10% 50%; }
+  .idea__clipper {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    clip-path: circle(70.7% at 100% 50%); }
+  .idea__content {
+    height: 100%;
+    width: 50%;
+    float: right;
+    padding: 0rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+    .idea__content h3 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-style: italic;
+      letter-spacing: 1px; }
+  .idea__description {
+    font-size: 1.4rem; }
+
+.product {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), url("../img/gift-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .product___display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 10rem;
+    padding: 8rem; }
+  .product__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-image: linear-gradient(to bottom, #CA8ACA 0%, #FFF9C0 100%);
+    border-radius: 1rem; }
+  .product__img {
+    width: 100%;
+    background-size: cover;
+    margin-bottom: 1rem;
+    box-shadow: 1px 1px 1rem 1px rgba(100, 100, 100, 0.8);
+    border-radius: 1rem;
+    transition: all 0.3s; }
+  .product__img:hover {
+    transform: scale(1.02);
+    box-shadow: 1px 1px 2rem 3px rgba(100, 100, 100, 0.8); }
+  .product__code {
+    font-size: 1.4rem;
+    color: #924292;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    column-gap: 1.5rem; }
+  .product__code::before, .product__code::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 8rem;
+    background-color: #000; }
+  .product__more {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #CA8ACA;
+    perspective: 100px;
+    transition: transform 0.3s cubic-bezier(0.78, 0.13, 0.32, 0.89); }
+  .product__more:hover {
+    transform: scale(1.1); }
+
+.review {
+  background-image: url("../img/review-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 5rem; }
+  .review__heading {
+    text-align: center;
+    margin-bottom: 3rem; }
+  .review__card {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    padding: 2rem;
+    padding-right: 6rem;
+    padding-left: 6rem; }
+    .review__card--1 {
+      background-image: linear-gradient(to right, #CA8ACA 20%, #FFF9C0 80%);
+      border-top-left-radius: 20rem;
+      border-bottom-right-radius: 20rem;
+      margin-bottom: 1rem; }
+    .review__card--2 {
+      background-image: linear-gradient(to right, #FFF9C0 20%, #CA8ACA 80%);
+      border-top-right-radius: 20rem;
+      border-bottom-left-radius: 20rem;
+      margin-bottom: 1rem; }
+    .review__card--3 {
+      background-image: linear-gradient(to right, #CA8ACA 20%, #FFF9C0 80%);
+      border-top-left-radius: 20rem;
+      border-bottom-right-radius: 20rem;
+      margin-bottom: 1rem; }
+    .review__card--4 {
+      background-image: linear-gradient(to right, #FFF9C0 20%, #CA8ACA 80%);
+      border-top-right-radius: 20rem;
+      border-bottom-left-radius: 20rem;
+      margin-bottom: 1rem; }
+  .review__img {
+    position: relative; }
+  .review__img img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s;
+    margin-right: 2rem; }
+  .review__img figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* FIXME Why I can't translate -50% for X & Y to make it center?! */
+    transform: translateY(-60%) translateX(-75%);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: all 0.3s; }
+  .review__caption {
+    font-size: 2rem; }
+  .review__text {
+    font-size: 1.4rem; }
+  .review__card:hover .review__img figcaption {
+    opacity: 1;
+    color: #fff; }
+  .review__card:hover .review__img img {
+    filter: blur(0.8px) brightness(75%); }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #252525; }
+
+.socl-mdia {
+  margin-bottom: 2rem; }
+  .socl-mdia__link:not(:last-child) {
+    margin-right: 2rem; }
+  .socl-mdia__icon {
+    display: inlie-block;
+    width: 3rem;
+    height: 3rem;
+    fill: #fff;
+    transition: all 0.3s; }
+    .socl-mdia__icon--fb {
+      display: inlie-block;
+      width: 3.5rem;
+      height: 3.5rem;
+      fill: #fff;
+      transform: translateY(2px); }
+  .socl-mdia__icon:hover {
+    transform: scale(1.2); }
+
+.created {
+  display: flex; }
+  .created__text {
+    text-transform: lowercase;
+    color: #CA8ACA;
+    font-size: 1.2rem;
+    margin-bottom: 1.8rem;
+    display: inline-block; }
+  .created__icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: red;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem; }
+
+.copyright {
+  font-size: 1.2rem;
+  color: #fff; }

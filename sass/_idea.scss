@@ -1,0 +1,35 @@
+.idea {
+  background-image: url('../img/idea-bg.jpg');
+  height: 75vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -10% 50%;
+
+  &__clipper {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    clip-path: circle(70.7% at 100% 50%);
+  }
+
+  &__content {
+    height: 100%;
+    width: 50%;
+    float: right;
+    padding: 0rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    & h3 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-style: italic;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__description {
+    font-size: 1.4rem;
+  }
+}

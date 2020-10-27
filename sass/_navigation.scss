@@ -1,40 +1,75 @@
 .nav {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.1rem;
+  /* It seems no shadow is better. */
+  // box-shadow: 0 3px 2.5rem 1px rgba(100, 100, 100, 0.7);
+  background-color: #252525;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
 
-  &__logo {
-    width: 6rem;
-    margin-right: auto;
-    margin-left: 3rem;
+  &__company {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+  }
+
+  &__company-logo {
+    width: 5rem;
+    margin-right: 2rem;
+    margin-left: 5.5rem;
+  }
+
+  &__company-name:link,
+  &__company-name:visited {
+    text-decoration: none;
+    font-size: 4rem;
+    color: $primary-color;
+  }
+
+  &__company:hover,
+  &__company:focus {
+    transform: scale(1.1) translateY(1.5px);
   }
 
   &__buttons {
     display: flex;
-    padding: 2rem;
+    padding: 1rem;
 
     & > * {
-      margin-right: 4rem;
+      margin-right: 2.5rem;
     }
+
+    /* I want select all childs but not 6th & 7th, below code doesn't work. Why? */
+    // & > *:not(:nth-child(6)),
+    // & > *:not(:nth-child(7)) {
+    //   margin-right: 3rem;
+    // }
   }
 
   &__btn-link:link,
   &__btn-link:visited {
     font-size: 1.8rem;
-    padding-bottom: 2px;
     text-decoration: none;
     text-transform: uppercase;
     color: $primary-color;
     display: flex;
     align-items: center;
+    padding: 0.5rem;
     border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s;
+    transition: all 0.3s;
   }
 
   &__btn-link:hover,
+  &__btn-link:focus,
   &__btn-link:active {
     border-bottom: 2px solid $secondary-color;
+    transform: scale(1.1);
+    color: darken($primary-color, 20%);
   }
 
   &__icon {
@@ -44,18 +79,26 @@
     margin-right: 0.7rem;
   }
 
-  &__btn-home {
+  &__divider {
+    background-color: $secondary-color;
+    width: 2px;
   }
 
-  &__btn-gift {
-  }
+  &__language {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // margin-right: 1rem;
 
-  &__btn-delivery {
-  }
+    &-dash {
+      background-color: $primary-color;
+      height: 1px;
+    }
 
-  &__btn-about {
-  }
-
-  &__btn_contact {
+    &-choice {
+      color: #fff;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
   }
 }

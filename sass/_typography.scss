@@ -1,6 +1,10 @@
-.heading-primary {
-  
-}
-
-.heading-secondary {
+.section-heading {
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  background-image: linear-gradient(to bottom, $primary-color 50%, $secondary-color 95%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }

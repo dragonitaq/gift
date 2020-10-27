@@ -1,0 +1,71 @@
+.product {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), url('../img/gift-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &___display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 10rem;
+    padding: 8rem;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-image: linear-gradient(to bottom, $primary-color 0%, $tertiary-color 100%);
+    border-radius: 1rem;
+  }
+
+  &__img {
+    width: 100%;
+    background-size: cover;
+    margin-bottom: 1rem;
+    box-shadow: 1px 1px 1rem 1px rgba(100, 100, 100, 0.8);
+    border-radius: 1rem;
+    transition: all 0.3s;
+  }
+
+  &__img:hover {
+    transform: scale(1.02);
+    box-shadow: 1px 1px 2rem 3px rgba(100, 100, 100, 0.8);
+  }
+
+  &__code {
+    font-size: 1.4rem;
+    color: darken($primary-color, 25%);
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    column-gap: 1.5rem;
+  }
+
+  &__code::before,
+  &__code::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 8rem;
+    background-color: #000;
+  }
+
+  &__more {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $primary-color;
+    perspective: 100px;
+    transition: transform 0.3s cubic-bezier(.78,.13,.32,.89);
+  }
+  
+  &__more:hover {
+    transform: scale(1.1);
+  }
+}
