@@ -1,24 +1,30 @@
 {
-  "name": "gift",
+  "name": "mjgift",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "We help you prepare & deliver your desired gift for your love ones.",
+  "main": "server.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w"
+    "start": "node server.js",
+    "dev": "concurrently --kill-others \"npm run compile:sass\" \"nodemon server.js\"",
+    "compile:sass": "sass --watch sass/main.scss public/css/style.css"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dragonitaq/gift.git"
+    "url": "git+https://github.com/dragonitaq/mjgift.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "kevin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dragonitaq/gift/issues"
+    "url": "https://github.com/dragonitaq/mjgift/issues"
   },
-  "homepage": "https://github.com/dragonitaq/gift#readme",
-  "dependencies": {},
+  "homepage": "https://github.com/dragonitaq/mjgift#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
   "devDependencies": {
-    "node-sass": "^4.14.1"
+    "concurrently": "^5.3.0",
+    "sass": "^1.32.5"
   }
 }
