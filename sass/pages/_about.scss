@@ -1,0 +1,169 @@
+/*
+   ###    ########   #######  ##     ## ########
+  ## ##   ##     ## ##     ## ##     ##    ##
+ ##   ##  ##     ## ##     ## ##     ##    ##
+##     ## ########  ##     ## ##     ##    ##
+######### ##     ## ##     ## ##     ##    ##
+##     ## ##     ## ##     ## ##     ##    ##
+##     ## ########   #######   #######     ##
+*/
+
+.about {
+  background-image: url('../img/about/about-bg.jpg');
+  height: 75vh;
+  margin-top: 6.5rem;
+  background-size: cover;
+
+  @include respond(bp-750) {
+    height: 60vw;
+  }
+
+  &__clipper {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    clip-path: circle(70.7% at 0% 50%);
+
+    @include respond(bp-450) {
+      background-color: transparent;
+      clip-path: circle(150% at 100% 50%);
+    }
+  }
+
+  &__content {
+    height: 100%;
+    width: 50%;
+    padding: 0rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    @include respond(bp-600) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      width: 52%;
+    }
+
+    @include respond(bp-450) {
+      background-color: rgba(255, 255, 255, 0.7);
+      width: 100%;
+      padding: 3rem;
+      padding-top: 2rem;
+    }
+
+    & h2 {
+      @include respond(bp-1050) {
+        line-height: 1;
+      }
+
+      @include respond(bp-600) {
+        font-size: 4rem;
+      }
+    }
+
+    & h3 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-style: italic;
+      letter-spacing: 1px;
+
+      @include respond(bp-600) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 1.4rem;
+
+    @include respond(bp-600) {
+      line-height: 1.2;
+    }
+  }
+}
+
+/*
+#### ########  ########    ###
+ ##  ##     ## ##         ## ##
+ ##  ##     ## ##        ##   ##
+ ##  ##     ## ######   ##     ##
+ ##  ##     ## ##       #########
+ ##  ##     ## ##       ##     ##
+#### ########  ######## ##     ##
+*/
+
+.idea {
+  background-image: url('../img/about/idea-bg.jpg');
+  height: 75vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -10% 50%;
+
+  @include respond(bp-750) {
+    height: 60vw;
+  }
+
+  &__clipper {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    clip-path: circle(70.7% at 100% 50%);
+
+    @include respond(bp-450) {
+      background-color: transparent;
+      clip-path: circle(150% at 100% 50%);
+    }
+  }
+
+  &__content {
+    height: 100%;
+    width: 50%;
+    float: right;
+    padding: 0rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    @include respond(bp-600) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      width: 52%;
+    }
+
+    @include respond(bp-450) {
+      background-color: rgba(255, 255, 255, 0.7);
+      width: 100%;
+      padding: 3rem;
+      padding-top: 2rem;
+    }
+
+    & h2 {
+      @include respond(bp-1050) {
+        line-height: 1;
+      }
+
+      @include respond(bp-600) {
+        font-size: 4rem;
+      }
+    }
+
+    & h3 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-style: italic;
+      letter-spacing: 1px;
+
+      @include respond(bp-600) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 1.4rem;
+
+    @include respond(bp-600) {
+      line-height: 1.2;
+    }
+  }
+}

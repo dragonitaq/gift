@@ -1,10 +1,22 @@
-@import "variables";
-@import "base";
-@import "component";
-@import "navigation";
-@import "hero";
-@import "about";
-@import "idea";
-@import "product";
-@import "review";
-@import "footer";
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins';
+
+// 2. Vendors
+@import 'vendors/normalize';
+
+// 3. Base stuff
+@import 'base/base', 'base/fonts', 'base/typography', 'base/helpers';
+
+// 4. Layout-related sections
+@import 'layout/header', 'layout/footer', 'layout/navigation';
+
+// 5. Components
+@import 'components/button', 'components/heading';
+
+// 6. Page-specific styles
+@import 'pages/index', 'pages/gift', 'pages/about', 'pages/delivery', 'pages/contact';
+
+// 7. Themes
+@import 'themes/default';
