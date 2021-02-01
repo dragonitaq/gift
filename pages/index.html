@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/mjgift-logo-low.png" type="image" sizes="16x16" />
+    <link rel="icon" href="img/mjgift-logo.png" type="image" sizes="16x16" />
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>MJ GIFT | MEMORY & JOY</title>
     <meta name="description" content="We help you prepare & deliver your desired gift for your love ones." />
   </head>
@@ -117,20 +118,20 @@
     <section class="product-preview">
       <h2 class="section-heading product-preview__heading">Gift</h2>
       <div class="product-preview___display">
-        <div class="product-preview__card">
+        <div class="product-preview__card" data-aos="fade-up">
           <img src="img/index/gift-preview-1.jpg" alt="Product 1" class="product-preview__img" />
         </div>
-        <div class="product-preview__card">
+        <div class="product-preview__card" data-aos="fade-up">
           <img src="img/index/gift-preview-2.jpg" alt="Product 2" class="product-preview__img" />
         </div>
-        <div class="product-preview__card">
+        <div class="product-preview__card" data-aos="fade-up">
           <img src="img/index/gift-preview-3.jpg" alt="Product 3" class="product-preview__img" />
         </div>
-        <div class="product-preview__card">
+        <div class="product-preview__card" data-aos="fade-up">
           <img src="img/index/gift-preview-4.jpg" alt="Product 4" class="product-preview__img" />
         </div>
       </div>
-      <a href="/gift" class="product-preview__more">Explore more</a>
+      <a href="/gift" class="product-preview__more" data-aos="fade-up">Explore more</a>
     </section>
 
     <!--
@@ -145,9 +146,9 @@
 
     <section class="brief">
       <h2 class="section-heading review__heading">About Us</h2>
-      <p>MJ GIFT designs and handcrafts every gift with practicability and aesthetic in mind to ensure gift senders and receivers are happy and satisfied.</p>
+      <p data-aos="fade-up">MJ GIFT designs and handcrafts every gift with practicability and aesthetic in mind to ensure gift senders and receivers are happy and satisfied.</p>
       <div class="cta">
-        <a href="/about" class="cta__products">Explore Us</a>
+        <a href="/about" class="cta__products" data-aos="fade-up">Explore Us</a>
       </div>
     </section>
 
@@ -163,14 +164,14 @@
 
     <section class="review">
       <h2 class="section-heading review__heading">Review</h2>
-      <div class="review__card review__card--1">
+      <div class="review__card review__card--1" data-aos="fade-up">
         <p class="review__text">Received the gift box. Love it so much.. Ideal for the coming Christmas.</p>
         <div class="review__author">
           <p class="review__author-name">Veronica H*</p>
           <p class="review__author-purpose"><em>Bought for her best friends</em></p>
         </div>
       </div>
-      <div class="review__card review__card--2">
+      <div class="review__card review__card--2" data-aos="fade-up">
         <p class="review__text">
           Such a friendly seller! Fast and efficient on handling my gifts even I'm ordering it from oversea. Fuss free and pleasant transaction dealing with her. She even walk the extra mile to
           deliver the gifts to my friend by her own! My friend likes the gift very much! Beautiful packaging with a pleasant smell. Surely will purchase again in the future!
@@ -180,14 +181,14 @@
           <p class="review__author-purpose"><em>Bought for her colleague</em></p>
         </div>
       </div>
-      <div class="review__card review__card--3">
+      <div class="review__card review__card--3" data-aos="fade-up">
         <p class="review__text">My fiance likes the soup so much!. He said he never used such high quality soup before. We had a wonderful gift exchange moment.</p>
         <div class="review__author">
           <p class="review__author-name">W** San</p>
           <p class="review__author-purpose"><em>Bought for her fiance</em></p>
         </div>
       </div>
-      <div class="review__card review__card--4">
+      <div class="review__card review__card--4" data-aos="fade-up">
         <p class="review__text">Gift to my niece on her birthday and she feels so happy now. Pleasant services. Would recommend this to my friends and family.</p>
         <div class="review__author">
           <p class="review__author-name">L** Ye</p>
@@ -241,5 +242,9 @@
       </div>
       <div class="copyright">&copy; MJ GIFT 2021</div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

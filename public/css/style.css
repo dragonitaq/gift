@@ -1174,27 +1174,11 @@ body {
 .contact-form .contact-form__container .submitted.no-display {
   display: none;
 }
+.contact-form .contact-form__container .submitted.submit-fail p {
+  color: #d40000;
+}
 .contact-form .contact-form__container .submitted p {
   font-size: 1.6rem;
-}
-
-.enquiry {
-  margin-top: 6.5rem;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(202, 138, 202, 0.45);
-}
-.enquiry h2 {
-  font-size: 3rem;
-  text-shadow: 3px 3px 15px rgba(100, 100, 100, 0.8);
-  margin-bottom: 1rem;
-}
-.enquiry p {
-  font-size: 1.6rem;
-  text-shadow: 3px 3px 15px rgba(100, 100, 100, 0.8);
 }
 
 .invalid {
