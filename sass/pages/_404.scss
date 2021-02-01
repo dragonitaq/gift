@@ -1,0 +1,16 @@
+.invalid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6.5rem;
+  height: 90vh;
+  background-color: rgba(202, 138, 202, 0.45);
+
+  p {
+    font-size: 3rem;
+    color: red;
+    text-shadow: 3px 3px 15px rgba(100, 100, 100, 0.8);
+    margin-bottom: 2rem;
+  }
+}

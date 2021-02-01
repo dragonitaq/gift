@@ -10,7 +10,15 @@
     <meta name="description" content="We help you prepare & deliver your desired gift for your love ones." />
   </head>
   <body>
-    <!-- ############################# Navigation ############################## -->
+    <!--
+    ##    ##    ###    ##     ##
+    ###   ##   ## ##   ##     ##
+    ####  ##  ##   ##  ##     ##
+    ## ## ## ##     ## ##     ##
+    ##  #### #########  ##   ##
+    ##   ### ##     ##   ## ##
+    ##    ## ##     ##    ###
+    -->
 
     <nav class="nav">
       <div class="nav__company">
@@ -70,21 +78,63 @@
       </div>
     </nav>
 
-    <!-- ############################### Footer ################################ -->
+    <!--
+    ########  #######  ########  ##     ##
+    ##       ##     ## ##     ## ###   ###
+    ##       ##     ## ##     ## #### ####
+    ######   ##     ## ########  ## ### ##
+    ##       ##     ## ##   ##   ##     ##
+    ##       ##     ## ##    ##  ##     ##
+    ##        #######  ##     ## ##     ##
+    -->
 
+    <section class="contact-form">
+      <div class="contact-form__container">
+        <form action="/enquiry" method="POST" id="contact-form__form">
+          <div class="contact-form__name">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div class="contact-form__email">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="contact-form__msg">
+            <label for="msg">Message:</label>
+            <textarea id="msg" name="msg" rows="10" cols="50" placeholder="Leave your message here."></textarea>
+          </div>
+          <input type="submit" class="submit" />
+        </form>
+        <div class="submitted no-display">
+          <p>Thank you for your interest. We will response soon.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--
+    ########  #######   #######  ######## ######## ########
+    ##       ##     ## ##     ##    ##    ##       ##     ##
+    ##       ##     ## ##     ##    ##    ##       ##     ##
+    ######   ##     ## ##     ##    ##    ######   ########
+    ##       ##     ## ##     ##    ##    ##       ##   ##
+    ##       ##     ## ##     ##    ##    ##       ##    ##
+    ##        #######   #######     ##    ######## ##     ##
+    -->
+
+    <!-- Important lesson! Using class like social, social__link, social__badge social__button or something similar, it will get block by browser adblocker. I realized these adblockers will scan for class with similar name and inject stylesheet with code as display: none !important; My method to circumvent this is not to use similar class name. -->
     <footer class="footer">
       <div class="socl-mdia">
-        <a href="#" class="socl-mdia__link">
+        <a href="https://www.facebook.com/MJ-GIFT-%E7%A4%BC%E5%93%81%E5%BA%97-103265468289112/" target="_blank" class="socl-mdia__link">
           <svg class="socl-mdia__icon socl-mdia__icon--fb">
             <use href="img/sprite.svg#icon-facebook2"></use>
           </svg>
         </a>
-        <a href="#" class="socl-mdia__link">
+        <a href="https://www.instagram.com/mjgift.my/" target="_blank" class="socl-mdia__link">
           <svg class="socl-mdia__icon">
             <use href="img/sprite.svg#icon-instagram1"></use>
           </svg>
         </a>
-        <a href="#" class="socl-mdia__link">
+        <!-- <a href="#" class="socl-mdia__link">
           <svg class="socl-mdia__icon">
             <use href="img/sprite.svg#icon-telegram"></use>
           </svg>
@@ -93,7 +143,7 @@
           <svg class="socl-mdia__icon">
             <use href="img/sprite.svg#icon-whatsapp"></use>
           </svg>
-        </a>
+        </a> -->
       </div>
       <div class="created">
         <p class="created__text">
@@ -104,7 +154,7 @@
           in Malaysia
         </p>
       </div>
-      <div class="copyright">&copy; Copyright MJ GIFT 2020</div>
+      <div class="copyright">&copy; MJ GIFT 2021</div>
     </footer>
   </body>
 </html>

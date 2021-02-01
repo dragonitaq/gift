@@ -78,13 +78,13 @@
 }
 
 /*
-.########..########...#######..########..........########..########..########.##.....##
-.##.....##.##.....##.##.....##.##.....##.........##.....##.##.....##.##.......##.....##
-.##.....##.##.....##.##.....##.##.....##.........##.....##.##.....##.##.......##.....##
-.########..########..##.....##.##.....##.#######.########..########..######...##.....##
-.##........##...##...##.....##.##.....##.........##........##...##...##........##...##.
-.##........##....##..##.....##.##.....##.........##........##....##..##.........##.##..
-.##........##.....##..#######..########..........##........##.....##.########....###...
+########  ########  ######## ##     ## #### ######## ##      ##
+##     ## ##     ## ##       ##     ##  ##  ##       ##  ##  ##
+##     ## ##     ## ##       ##     ##  ##  ##       ##  ##  ##
+########  ########  ######   ##     ##  ##  ######   ##  ##  ##
+##        ##   ##   ##        ##   ##   ##  ##       ##  ##  ##
+##        ##    ##  ##         ## ##    ##  ##       ##  ##  ##
+##        ##     ## ########    ###    #### ########  ###  ###
 */
 
 .product-preview {
@@ -94,6 +94,7 @@
   background-attachment: fixed;
   background-position: center;
   padding: 5rem;
+  padding-bottom: 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -139,7 +140,7 @@
     padding: 2rem;
     background-image: linear-gradient(to bottom, $primary-color 0%, $tertiary-color 100%);
     border-radius: 1rem;
-    box-shadow: 1px 1px 2rem 3px rgba(0, 0, 0, 0.8);
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
 
     @include respond(bp-1050) {
       padding: 1.2rem;
@@ -149,37 +150,25 @@
   &__img {
     width: 100%;
     background-size: cover;
-    // margin-bottom: 1rem;
-    box-shadow: 1px 1px 1rem 1px rgba(100, 100, 100, 0.8);
+    box-shadow: 1px 1px 10px 1px rgba(100, 100, 100, 0.8);
     border-radius: 1rem;
     transition: all 0.3s;
   }
 
   &__img:hover {
     transform: scale(1.02);
-    box-shadow: 1px 1px 2rem 3px rgba(100, 100, 100, 0.8);
-  }
-
-  &__code {
-    font-size: 1.4rem;
-    color: darken($primary-color, 25%);
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    align-items: center;
-    column-gap: 1.5rem;
+    box-shadow: 1px 1px 20px 3px rgba(100, 100, 100, 0.8);
   }
 
   &__more {
-    background-image: linear-gradient(to right, $primary-color 0%, $tertiary-color 100%);
+    background-image: linear-gradient(to bottom, $primary-color 0%, $tertiary-color 100%);
     font-size: 1.8rem;
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 5rem;
-    padding: 0.5rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding: 0.5rem 1.5rem;
     color: #000;
-    transition: transform 0.3s cubic-bezier(0.78, 0.13, 0.32, 0.89);
+    transition: all 0.3s;
 
     @include respond(bp-600) {
       margin-top: 3rem;
@@ -192,6 +181,32 @@
 }
 
 /*
+########  ########  #### ######## ########
+##     ## ##     ##  ##  ##       ##
+##     ## ##     ##  ##  ##       ##
+########  ########   ##  ######   ######
+##     ## ##   ##    ##  ##       ##
+##     ## ##    ##   ##  ##       ##
+########  ##     ## #### ######## ##
+*/
+
+.brief {
+  background-image: linear-gradient(to right, rgba(202, 138, 202, 0.5) 35%, rgb(255, 249, 192, 0) 100%), url('/img/index/brief-bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 60rem;
+  padding: 5rem 10rem;
+
+  p {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-shadow: 3px 3px 15px rgba(100, 100, 100, 0.8);
+    max-width: 50%;
+    margin-top: 12rem;
+  }
+}
+/*
 ########  ######## ##     ## #### ######## ##      ##
 ##     ## ##       ##     ##  ##  ##       ##  ##  ##
 ##     ## ##       ##     ##  ##  ##       ##  ##  ##
@@ -202,7 +217,7 @@
 */
 
 .review {
-  background-image: url('../img/index/review-bg.jpg');
+  background-image: url('/img/index/review-bg.jpg');
   background-size: cover;
   background-attachment: fixed;
   padding: 5rem;
@@ -225,10 +240,13 @@
   &__card {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 70%;
+    height: 15rem;
     padding: 2rem;
     padding-right: 6rem;
     padding-left: 6rem;
+    position: relative;
 
     @include respond(bp-1050) {
       padding-right: 7.5rem;
@@ -277,9 +295,38 @@
         border-radius: 7rem;
       }
     }
+    &--1::after {
+      content: '';
+      background-image: linear-gradient(to left, $primary-color 20%, $tertiary-color 80%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-top-left-radius: 20rem;
+      border-bottom-right-radius: 20rem;
+      opacity: 0%;
+      transition: all 0.5s;
+
+      @include respond(bp-600) {
+        border-top-left-radius: 10rem;
+        border-bottom-right-radius: 10rem;
+      }
+
+      @include respond(bp-450) {
+        border-radius: 7rem;
+      }
+    }
+
+    &--1:hover {
+      &::after {
+        opacity: 100%;
+      }
+    }
 
     &--2 {
-      background-image: linear-gradient(to right, $tertiary-color 20%, $primary-color 80%);
+      background-image: linear-gradient(to left, $primary-color 20%, $tertiary-color 80%);
       border-top-right-radius: 20rem;
       border-bottom-left-radius: 20rem;
       margin-bottom: 1rem;
@@ -291,6 +338,36 @@
 
       @include respond(bp-450) {
         border-radius: 7rem;
+      }
+    }
+
+    &--2::after {
+      content: '';
+      background-image: linear-gradient(to right, $primary-color 20%, $tertiary-color 80%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-top-right-radius: 20rem;
+      border-bottom-left-radius: 20rem;
+      opacity: 0%;
+      transition: all 0.5s;
+
+      @include respond(bp-600) {
+        border-top-right-radius: 10rem;
+        border-bottom-left-radius: 10rem;
+      }
+
+      @include respond(bp-450) {
+        border-radius: 7rem;
+      }
+    }
+
+    &--2:hover {
+      &::after {
+        opacity: 100%;
       }
     }
 
@@ -310,6 +387,36 @@
       }
     }
 
+    &--3::after {
+      content: '';
+      background-image: linear-gradient(to left, $primary-color 20%, $tertiary-color 80%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-top-left-radius: 20rem;
+      border-bottom-right-radius: 20rem;
+      opacity: 0%;
+      transition: all 0.5s;
+
+      @include respond(bp-600) {
+        border-top-left-radius: 10rem;
+        border-bottom-right-radius: 10rem;
+      }
+
+      @include respond(bp-450) {
+        border-radius: 7rem;
+      }
+    }
+
+    &--3:hover {
+      &::after {
+        opacity: 100%;
+      }
+    }
+
     &--4 {
       background-image: linear-gradient(to right, $tertiary-color 20%, $primary-color 80%);
       border-top-right-radius: 20rem;
@@ -325,50 +432,67 @@
         border-radius: 7rem;
       }
     }
-  }
 
-  &__img {
-    position: relative;
-  }
+    &--4::after {
+      content: '';
+      background-image: linear-gradient(to right, $primary-color 20%, $tertiary-color 80%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-top-right-radius: 20rem;
+      border-bottom-left-radius: 20rem;
+      opacity: 0%;
+      transition: all 0.5s;
 
-  &__img img {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-    transition: all 0.3s;
-    margin-right: 2rem;
-  }
+      @include respond(bp-600) {
+        border-top-right-radius: 10rem;
+        border-bottom-left-radius: 10rem;
+      }
 
-  &__img figcaption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-60%) translateX(-75%);
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    opacity: 0;
-    transition: all 0.3s;
-  }
+      @include respond(bp-450) {
+        border-radius: 7rem;
+      }
+    }
 
-  &__caption {
-    font-size: 2rem;
+    &--4:hover {
+      &::after {
+        opacity: 100%;
+      }
+    }
   }
 
   &__text {
     font-size: 1.4rem;
+    z-index: 1;
 
     @include respond(bp-450) {
       font-size: 1.6rem;
     }
   }
 
-  &__card:hover &__img figcaption {
-    opacity: 1;
-    color: #fff;
-  }
+  &__author {
+    width: max-content;
+    min-width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 
-  &__card:hover &__img img {
-    filter: blur(0.8px) brightness(75%);
+    &-name {
+      font-size: 2.2rem;
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      z-index: 1;
+    }
+
+    &-purpose {
+      text-align: center;
+      z-index: 1;
+    }
   }
 }

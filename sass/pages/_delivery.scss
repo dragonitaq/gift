@@ -1,0 +1,14 @@
+.delivery {
+  margin-top: 6.5rem;
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0.8) 0%, rgb(255, 255, 255, 0.3) 50%), url('/img/delivery/delivery-bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 70rem;
+  padding: 5rem 10rem;
+  text-align: center;
+
+  .delivery-details {
+    font-size: 2rem;
+  }
+}
