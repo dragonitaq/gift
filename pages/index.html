@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/mjgift-logo.png" type="image" sizes="16x16" />
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/index.js" defer></script>
     <title>MJ GIFT | MEMORY & JOY</title>
     <meta name="description" content="We help you prepare & deliver your desired gift for your love ones." />
   </head>
@@ -69,15 +70,73 @@
             <span>Contact</span>
           </a>
         </div>
+
         <!-- <div class="nav__divider">&nbsp;</div>
-        <div class="nav__language">
-          <a href="#" class="nav__language-choice">EN</a>
-          <span class="nav__language-dash">&nbsp;</span>
-          <span class="nav__language-slash">&#124;</span>
-          <a href="#" class="nav__language-choice">CN</a>
-        </div> -->
+            <div class="nav__language">
+              <a href="#" class="nav__language-choice">EN</a>
+              <span class="nav__language-dash">&nbsp;</span>
+              <span class="nav__language-slash">&#124;</span>
+              <a href="#" class="nav__language-choice">CN</a>
+            </div> -->
+      </div>
+      <div class="menu" id="menu">
+        <div class="menu__btn">
+          <svg class="menu__icon">
+            <use href="img/sprite.svg#menu"></use>
+          </svg>
+        </div>
       </div>
     </nav>
+
+    <div class="menu-overlay no-display" id="menu-overlay">
+      <div class="close" id="close">
+        <svg class="close__icon">
+          <use href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+      <div class="menu-overlay__btn--overlay">
+        <div class="menu-overlay__btn-home">
+          <a href="/" class="menu-overlay__btn-link">
+            <svg class="menu-overlay__icon">
+              <use href="img/sprite.svg#icon-home"></use>
+            </svg>
+            <span>Home</span>
+          </a>
+        </div>
+        <div class="menu-overlay__btn-gift">
+          <a href="/gift" class="menu-overlay__btn-link">
+            <svg class="menu-overlay__icon">
+              <use href="img/sprite.svg#icon-redeem"></use>
+            </svg>
+            <span>Gift</span>
+          </a>
+        </div>
+        <div class="menu-overlay__btn-delivery">
+          <a href="/delivery" class="menu-overlay__btn-link">
+            <svg class="menu-overlay__icon">
+              <use href="img/sprite.svg#icon-delivery_dining"></use>
+            </svg>
+            <span>Delivery</span>
+          </a>
+        </div>
+        <div class="menu-overlay__btn-about">
+          <a href="/about" class="menu-overlay__btn-link">
+            <svg class="menu-overlay__icon">
+              <use href="img/sprite.svg#icon-people_alt"></use>
+            </svg>
+            <span>About</span>
+          </a>
+        </div>
+        <div class="menu-overlay__btn_contact">
+          <a href="/contact" class="menu-overlay__btn-link">
+            <svg class="menu-overlay__icon">
+              <use href="img/sprite.svg#icon-contact_phone"></use>
+            </svg>
+            <span>Contact</span>
+          </a>
+        </div>
+      </div>
+    </div>
 
     <!--
     ##     ## ######## ########   #######
@@ -167,14 +226,14 @@
       <div class="review__card review__card--1" data-aos="fade-up">
         <p class="review__text">Received the gift box. Love it so much.. Ideal for the coming Christmas.</p>
         <div class="review__author">
-          <p class="review__author-name">Veronica H*</p>
+          <p class="review__author-name">Ver***ca Ho</p>
           <p class="review__author-purpose"><em>Bought for her best friends</em></p>
         </div>
       </div>
       <div class="review__card review__card--2" data-aos="fade-up">
         <p class="review__text">
-          Such a friendly seller! Fast and efficient on handling my gifts even I'm ordering it from oversea. Fuss free and pleasant transaction dealing with her. She even walk the extra mile to
-          deliver the gifts to my friend by her own! My friend likes the gift very much! Beautiful packaging with a pleasant smell. Surely will purchase again in the future!
+          Fuss free and pleasant transaction dealing with her even I'm ordering it from oversea. She even walk the extra mile to deliver the gifts to my friend by her own! My friend likes the gift
+          very much! Surely will purchase!
         </p>
         <div class="review__author">
           <p class="review__author-name">Y** Wei</p>
@@ -182,7 +241,7 @@
         </div>
       </div>
       <div class="review__card review__card--3" data-aos="fade-up">
-        <p class="review__text">My fiance likes the soup so much!. He said he never used such high quality soup before. We had a wonderful gift exchange moment.</p>
+        <p class="review__text">My fiance likes the soup so much! He said he never used such high quality soup before. We had a wonderful gift exchange moment!</p>
         <div class="review__author">
           <p class="review__author-name">W** San</p>
           <p class="review__author-purpose"><em>Bought for her fiance</em></p>

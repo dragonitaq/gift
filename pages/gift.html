@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/mjgift-logo.png" type="image" sizes="16x16" />
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/splide.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.4.6/dist/css/splide-extension-video.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.4.6/dist/js/splide-extension-video.min.js" defer></script>
     <script src="/js/gift.js" defer></script>
+    <script src="js/index.js" defer></script>
 
     <title>MJ GIFT | MEMORY & JOY</title>
     <meta name="description" content="We help you prepare & deliver your desired gift for your love ones." />
@@ -75,6 +76,7 @@
             <span>Contact</span>
           </a>
         </div>
+
         <!-- <div class="nav__divider">&nbsp;</div>
             <div class="nav__language">
               <a href="#" class="nav__language-choice">EN</a>
@@ -83,7 +85,64 @@
               <a href="#" class="nav__language-choice">CN</a>
             </div> -->
       </div>
+      <div class="menu" id="menu">
+        <div class="menu__btn">
+          <svg class="menu__icon">
+            <use href="img/sprite.svg#menu"></use>
+          </svg>
+        </div>
+      </div>
     </nav>
+
+    <div class="menu-overlay no-display" id="menu-overlay">
+      <div class="close" id="close">
+        <svg class="close__icon">
+          <use href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+      <div class="menu-overlay__btn--overlay">
+        <div class="menu-overlay__btn-home">
+          <a href="/" class="menu-overlay__btn-link">
+            <svg class="menu-overlay__icon">
+              <use href="img/sprite.svg#icon-home"></use>
+            </svg>
+            <span>Home</span>
+          </a>
+        </div>
+        <div class="menu-overlay__btn-gift">
+          <a href="/gift" class="menu-overlay__btn-link">
+            <svg class="menu-overlay__icon">
+              <use href="img/sprite.svg#icon-redeem"></use>
+            </svg>
+            <span>Gift</span>
+          </a>
+        </div>
+        <div class="menu-overlay__btn-delivery">
+          <a href="/delivery" class="menu-overlay__btn-link">
+            <svg class="menu-overlay__icon">
+              <use href="img/sprite.svg#icon-delivery_dining"></use>
+            </svg>
+            <span>Delivery</span>
+          </a>
+        </div>
+        <div class="menu-overlay__btn-about">
+          <a href="/about" class="menu-overlay__btn-link">
+            <svg class="menu-overlay__icon">
+              <use href="img/sprite.svg#icon-people_alt"></use>
+            </svg>
+            <span>About</span>
+          </a>
+        </div>
+        <div class="menu-overlay__btn_contact">
+          <a href="/contact" class="menu-overlay__btn-link">
+            <svg class="menu-overlay__icon">
+              <use href="img/sprite.svg#icon-contact_phone"></use>
+            </svg>
+            <span>Contact</span>
+          </a>
+        </div>
+      </div>
+    </div>
 
     <!--
      ######   #### ######## ########
@@ -177,6 +236,9 @@
             <h3 class="gift-video__title">Gift Videos</h3>
             <div class="splide__track">
               <ul class="splide__list">
+                <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=9df0MUQ7aDE">
+                  <img src="https://img.youtube.com/vi/9df0MUQ7aDE/sddefault.jpg" />
+                </li>
                 <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=tOQRjCN_Q64">
                   <img src="https://img.youtube.com/vi/tOQRjCN_Q64/sddefault.jpg" />
                 </li>
@@ -185,9 +247,6 @@
                 </li>
                 <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=kjX4e3Ao8qs">
                   <img src="https://img.youtube.com/vi/kjX4e3Ao8qs/sddefault.jpg" />
-                </li>
-                <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=9df0MUQ7aDE">
-                  <img src="https://img.youtube.com/vi/9df0MUQ7aDE/sddefault.jpg" />
                 </li>
                 <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=aW5QLZoLZU8">
                   <img src="https://img.youtube.com/vi/aW5QLZoLZU8/sddefault.jpg" />

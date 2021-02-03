@@ -4,10 +4,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.1rem;
-  /* It seems no shadow is better. */
-  // box-shadow: 0 3px 2.5rem 1px rgba(100, 100, 100, 0.7);
   background-color: #252525;
-  z-index: 1;
+  min-height: 6.5rem;
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
@@ -23,21 +22,21 @@
     margin-right: 2rem;
     margin-left: 5.5rem;
 
-    @include respond(bp-1050) {
+    @media (max-width: 1050px) {
       width: 4rem;
     }
 
-    @include respond(bp-750) {
+    @media (max-width: 750px) {
       width: 3.5rem;
       margin-left: 2rem;
     }
-    
-    @include respond(bp-600) {
+
+    @media (max-width: 600px) {
       width: 4rem;
       margin-right: 1rem;
     }
 
-    @include respond(bp-450) {
+    @media (max-width: 450px) {
       width: 5rem;
     }
   }
@@ -48,40 +47,39 @@
     font-size: 4rem;
     color: $primary-color;
 
-    @include respond(bp-1050) {
+    @media (max-width: 1050px) {
       font-size: 3rem;
     }
 
-    @include respond(bp-750) {
+    @media (max-width: 750px) {
       font-size: 2.5rem;
     }
 
-    @include respond(bp-600) {
+    @media (max-width: 600px) {
       font-size: 3rem;
     }
 
-    @include respond(bp-450) {
-      display: none;
+    @media (max-width: 450px) {
+      // display: none;
     }
-  }
-
-  &__company:hover,
-  &__company:focus {
-    transform: scale(1.1) translateY(1.5px);
   }
 
   &__buttons {
     display: flex;
     padding: 1rem;
 
+    @media (max-width: 450px) {
+      display: none;
+    }
+
     & > * {
       margin-right: 2.5rem;
 
-      @include respond(bp-1050) {
+      @media (max-width: 1050px) {
         margin-right: 1.5rem;
       }
 
-      @include respond(bp-900) {
+      @media (max-width: 900px) {
         margin-right: 1rem;
       }
     }
@@ -110,12 +108,10 @@
   &__btn-link:focus,
   &__btn-link:active {
     border-bottom: 2px solid $secondary-color;
-    transform: scale(1.1);
-    color: darken($primary-color, 20%);
   }
 
   &__btn-link span {
-    @include respond(bp-600) {
+    @media (max-width: 600px) {
       display: none;
     }
   }
@@ -125,72 +121,195 @@
     height: 3rem;
     fill: currentColor;
     margin-right: 0.7rem;
-    
-    @include respond(bp-600) {
+
+    @media (max-width: 600px) {
       margin-right: 1.2rem;
       width: 4.5rem;
       height: 4.5rem;
     }
-    
-    @include respond(bp-450) {
+
+    @media (max-width: 450px) {
       width: 3.8rem;
       height: 3.8rem;
     }
   }
 
-  &__divider {
-    background-color: $secondary-color;
-    width: 2px;
-    
-    @include respond(bp-600) {
-      margin-right: 1.5rem;
-      width: 1px;
+  .menu {
+    display: none;
+
+    @media (max-width: 450px) {
+      display: block;
     }
-    
-    @include respond(bp-450) {
-      margin-right: 2rem;
+    &__icon {
+      width: 3rem;
+      height: 3rem;
+      fill: $primary-color;
+      margin-right: 2.5rem;
+      cursor: pointer;
     }
   }
 
-  &__language {
+  /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+  /*                      For Language Selection                      */
+  /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+  // &__divider {
+  //   background-color: $secondary-color;
+  //   width: 2px;
+
+  //   @include respond(bp-600) {
+  //     margin-right: 1.5rem;
+  //     width: 1px;
+  //   }
+
+  //   @include respond(bp-450) {
+  //     margin-right: 2rem;
+  //   }
+  // }
+
+  // &__language {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+
+  //   @include respond(bp-600) {
+  //     flex-direction: row;
+  //     align-items: center;
+  //   }
+
+  //   &-dash {
+  //     background-color: $primary-color;
+  //     height: 1px;
+
+  //     @include respond(bp-600) {
+  //       display: none;
+  //     }
+  //   }
+
+  //   &-slash {
+  //     display: none;
+
+  //     @include respond(bp-600) {
+  //       display: inherit;
+  //       font-size: 2rem;
+  //       color: $primary-color;
+  //       margin-left: 3px;
+  //       margin-right: 3px;
+  //     }
+  //   }
+
+  //   &-choice {
+  //     color: #fff;
+  //     font-size: 1.6rem;
+  //     text-decoration: none;
+
+  //     @include respond(bp-600) {
+  //       font-size: 2rem;
+  //     }
+  //   }
+  // }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/*                           Overlay Menu                           */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.menu-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: all 0.5s;
+
+  &.no-display {
+    // REVIEW It seems there is animation visible when page load.
+    transform: translateY(-100%);
+  }
+
+  .close {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+
+    &__icon {
+      width: 3rem;
+      height: 3rem;
+      fill: $primary-color;
+    }
+  }
+
+  &__btn--overlay {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 
-    @include respond(bp-600) {
-      flex-direction: row;
-      align-items: center;
+    // & > * {
+    //   margin-right: 2.5rem;
+
+    //   @include respond(bp-1050) {
+    //     margin-right: 1.5rem;
+    //   }
+
+    //   @include respond(bp-900) {
+    //     margin-right: 1rem;
+    //   }
+    // }
+
+    /* I want select all childs but not 6th & 7th, below code doesn't work. Why? */
+    // & > *:not(:nth-child(6)),
+    // & > *:not(:nth-child(7)) {
+    //   margin-right: 3rem;
+    // }
+  }
+
+  &__btn-link:link,
+  &__btn-link:visited {
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $primary-color;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+  }
+
+  &__btn-link:hover,
+  &__btn-link:focus,
+  &__btn-link:active {
+    border-bottom: 2px solid $secondary-color;
+  }
+
+  &__btn-link span {
+    @media (max-width: 450px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+    fill: currentColor;
+    margin-right: 0.7rem;
+
+    @media (max-width: 600px) {
+      margin-right: 1.2rem;
+      width: 4.5rem;
+      height: 4.5rem;
     }
 
-    &-dash {
-      background-color: $primary-color;
-      height: 1px;
-
-      @include respond(bp-600) {
-        display: none;
-      }
-    }
-
-    &-slash {
-      display: none;
-
-      @include respond(bp-600) {
-        display: inherit;
-        font-size: 2rem;
-        color: $primary-color;
-        margin-left: 3px;
-        margin-right: 3px;
-      }
-    }
-
-    &-choice {
-      color: #fff;
-      font-size: 1.6rem;
-      text-decoration: none;
-
-      @include respond(bp-600) {
-        font-size: 2rem;
-      }
+    @media (max-width: 450px) {
+      width: 5rem;
+      height: 5rem;
     }
   }
 }
