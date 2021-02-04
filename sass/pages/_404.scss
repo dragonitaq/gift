@@ -11,6 +11,15 @@
     font-size: 3rem;
     color: red;
     text-shadow: 3px 3px 15px rgba(100, 100, 100, 0.8);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+  }
+
+  img {
+    margin-bottom: 2.5rem;
+    max-width: 100rem;
+    @media (max-width: 450px) {
+      max-width: 40rem;
+    }
   }
 }

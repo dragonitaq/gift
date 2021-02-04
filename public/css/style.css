@@ -1138,6 +1138,19 @@ body {
     padding-right: 0;
   }
 }
+.temp {
+  margin-top: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  background-color: rgba(202, 138, 202, 0.45);
+  height: 90vh;
+}
+.temp p {
+  font-size: 2.5rem;
+}
+
 /*
    ###    ########   #######  ##     ## ########
   ## ##   ##     ## ##     ## ##     ##    ##
@@ -1215,7 +1228,7 @@ body {
   }
 }
 .about__description {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 @media (max-width: 600px) {
   .about__description {
@@ -1302,7 +1315,7 @@ body {
   }
 }
 .idea__description {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 @media (max-width: 600px) {
   .idea__description {
@@ -1316,11 +1329,12 @@ body {
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  height: 70rem;
+  height: 90vh;
   padding: 5rem 10rem;
   text-align: center;
 }
 .delivery .delivery-details {
+  margin-top: 2rem;
   font-size: 2rem;
 }
 
@@ -1420,7 +1434,17 @@ body {
   font-size: 3rem;
   color: red;
   text-shadow: 3px 3px 15px rgba(100, 100, 100, 0.8);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}
+.invalid img {
+  margin-bottom: 2.5rem;
+  max-width: 100rem;
+}
+@media (max-width: 450px) {
+  .invalid img {
+    max-width: 40rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
