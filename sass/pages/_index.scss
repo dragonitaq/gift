@@ -109,6 +109,24 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+  // FUCK IOS system. The background image just doesn't work well.
+
+  // @media (max-width: 600px) {
+  //   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('../img/index/gift-preview-wood-bg.jpg');
+  //   background-attachment: scroll;
+  //   width: 100%;
+  //   height: auto;
+  // }
+  // @supports not (background-attachment: fixed) {
+  //   background-attachment: scroll;
+  //   width: 100%;
+  //   height: auto;
+  //   @media (max-width: 600px) {
+  //     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), url('../img/index/gift-preview-wood-bg.jpg');
+  //   }
+  // }
+
   background-position: center;
   padding: 5rem;
   padding-bottom: 6rem;
@@ -178,10 +196,9 @@
     }
   }
 
+  // Fuck IOS system. The grid layout just doesn't work well.
+
   &__card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 2rem;
     background-image: linear-gradient(to bottom, $primary-color 0%, $tertiary-color 100%);
     border-radius: 1rem;
@@ -310,6 +327,23 @@ $review-card-border-radius-s: 5rem;
   background-attachment: fixed;
   padding: 5rem;
   background-position: right;
+
+  // FUCK IOS system. The background image just doesn't work well.
+
+  // @media (max-width: 600px) {
+  //   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('../img/index/gift-preview-wood-bg.jpg');
+  //   background-attachment: scroll;
+  //   width: 100%;
+  //   height: auto;
+  // }
+  // @supports not (background-attachment: fixed) {
+  //   background-attachment: scroll;
+  //   width: 100%;
+  //   height: auto;
+  //   @media (max-width: 600px) {
+  //     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), url('../img/index/gift-preview-wood-bg.jpg');
+  //   }
+  // }
 
   & > *:not(:last-child) {
     margin-bottom: 2.5rem;

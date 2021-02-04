@@ -5,15 +5,19 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "concurrently --kill-others \"npm run compile:sass\" \"nodemon server.js\"",
-    "compile:sass": "sass --watch sass/main.scss public/css/style.css"
+    "dev": "concurrently --kill-others \"npm run watch:sass\" \"nodemon server.js\"",
+    "watch:sass": "sass --watch sass/main.scss public/css/style.css",
+    "compile:sass": "sass sass/main.scss public/css/style.css",
+    "prefix:css": "postcss public/css/style.css -o public/css/style.css --use autoprefixer",
+    "compress:css": "sass public/css/style.css public/css/style.css --style=compressed",
+    "build:css": "npm run compile:sass && npm run prefix:css && npm run compress:css"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dragonitaq/mjgift.git"
   },
   "keywords": [],
-  "author": "kevin",
+  "author": "Kevin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dragonitaq/mjgift/issues"
@@ -26,7 +30,10 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "autoprefixer": "^10.2.4",
     "concurrently": "^5.3.0",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
     "sass": "^1.32.5"
   }
 }
