@@ -14,37 +14,45 @@ form.addEventListener('submit', (event) => {
 
   // Check reCaptcha score
   grecaptcha.ready(function () {
-    grecaptcha.execute('6LfEYEUaAAAAAJR_DvIaoSATBg9JW2X6f0PCFdRY', { action: 'submit' }).then(function (token) {
-      // Create payload
-      const options = {
-        method: 'POST',
-        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          msg: msg,
-          token: token,
-        }),
-      };
-      // http call
-      fetch('/enquiry-form', options)
-        .then((res) => res.json())
-        .then((res) => {
-          console.log(res);
-          const sudmittedMsgSuccess = document.getElementsByClassName('submit-success')[0];
-          const sudmittedMsgFail = document.getElementsByClassName('submit-fail')[0];
-          if (res.status === 'success') {
-            sudmittedMsgSuccess.classList.toggle('no-display');
-            // setTimeout(() => {
-            //   sudmittedMsgSuccess.classList.toggle('no-display');
-            // }, 5000);
-          } else {
-            sudmittedMsgFail.classList.toggle('no-display');
-            // setTimeout(() => {
-            //   sudmittedMsgFail.classList.toggle('no-display');
-            // }, 5000);
-          }
-        });
-    });
+    grecaptcha
+      .execute('6LfEYEUaAAAAAJR_DvIaoSATBg9JW2X6f0PCFdRY', { action: 'submit' })
+      .then(function (token) {
+        // Create payload
+        const options = {
+          method: 'POST',
+          headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            msg: msg,
+            token: token,
+          }),
+        };
+        // http call
+        fetch('/enquiry-form', options)
+          .then((res) => res.json())
+          .then((res) => {
+            console.log(res);
+            const sudmittedMsgSuccess = document.getElementsByClassName('submit-success')[0];
+            const sudmittedMsgFail = document.getElementsByClassName('submit-fail')[0];
+            if (res.status === 'success') {
+              sudmittedMsgSuccess.classList.toggle('no-display');
+              // setTimeout(() => {
+              //   sudmittedMsgSuccess.classList.toggle('no-display');
+              // }, 5000);
+            } else {
+              sudmittedMsgFail.classList.toggle('no-display');
+              // setTimeout(() => {
+              //   sudmittedMsgFail.classList.toggle('no-display');
+              // }, 5000);
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   });
 });

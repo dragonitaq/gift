@@ -45,7 +45,7 @@ app.post('/enquiry-form', (req, res) => {
 
   if (!token) {
     console.log('No reCaptcha token received');
-    return res.status('403').json({
+    return res.status(403).json({
       status: 'fail',
     });
   }
@@ -57,8 +57,8 @@ app.post('/enquiry-form', (req, res) => {
     .then((response) => {
       if (response.data.score >= 0.5) {
         const emailContent = {
-          to: process.env.EMAIL_TO, // Change to your recipient
-          from: process.env.EMAIL_FROM, // Change to your verified sender
+          to: `${process.env.EMAIL_TO}`, // Change to your recipient
+          from: `${process.env.EMAIL_FROM}`, // Change to your verified sender
           subject: `Enquiry from MJ Gift website by ${name}`,
           text: `Name: ${name}\nEmail: ${email}\nMessage:\n${msg}`,
           html: `<strong>Name:</strong> ${name}\n<strong>Email:</strong> ${email}\n<strong>Message:</strong>\n${msg}`,
@@ -70,11 +70,20 @@ app.post('/enquiry-form', (req, res) => {
           })
           .catch((error) => {
             console.error(error);
-            res.status(200).json({ status: 'fail' });
+            res.status(403).json({ status: 'fail' });
           });
+      } else {
+        return res.status(403).json({
+          status: 'fail',
+        });
       }
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      console.log(err);
+      return res.status(403).json({
+        status: 'fail',
+      });
+    });
 });
 
 app.get('*', function (req, res) {
