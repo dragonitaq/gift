@@ -1,3 +1,17 @@
 # MJ GIFT
 
-Website for MJ Gift that I build for portfolio purpose.
+A standard website for MJ Gift. MJ Gift is a facebook page by a passionate woman who loves handcraft.
+
+Technologies involved:
+
+- Node.js
+- Express
+- reCAPTCHA v3
+- SendGrid/Mail
+- Google Analytics
+- SASS
+- postcss/autoprefixer
+- Animate On Scroll (AOS)
+- concurrently
+- axios
+- dotenv
