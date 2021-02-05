@@ -1,6 +1,6 @@
 # MJ GIFT
 
-A standard website for MJ Gift. MJ Gift is a facebook page by a passionate woman who loves handcraft.
+A standard website for MJ Gift. MJ Gift is a Facebook page by a passionate woman who loves handcraft.
 
 Technologies involved:
 
