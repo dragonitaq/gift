@@ -9,6 +9,9 @@
 
 .socl-mdia {
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &__link {
     &:not(:last-child) {
@@ -17,18 +20,17 @@
   }
 
   &__icon {
-    display: inlie-block;
+    display: block;
     width: 3rem;
     height: 3rem;
     fill: #fff;
     transition: all 0.3s;
 
     &--fb {
-      display: inlie-block;
       width: 3.5rem;
       height: 3.5rem;
       fill: #fff;
-      transform: translateY(2px);
+      // transform: translateY(2px);
     }
   }
 
@@ -41,10 +43,8 @@
   display: flex;
 
   &__text {
-    // text-transform: lowercase;
     color: $primary-color;
     font-size: 1.2rem;
-    // margin-right: 0.7rem;
     margin-bottom: 1.8rem;
     display: inline-block;
   }

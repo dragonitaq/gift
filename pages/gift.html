@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BV14DSJ93W"></script>
@@ -27,6 +27,13 @@
 
     <title>MJ GIFT | MEMORY & JOY</title>
     <meta name="description" content="We help you prepare & deliver your desired gift for your love ones." />
+    <meta name="author" content="Kevin" />
+    <!-- Facebook Open Graph protocol -->
+    <meta property="og:title" content="MJ Gift" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mjgift.herokuapp.com/" />
+    <meta property="og:image" content="https://mjgift.herokuapp.com/img/mjgift-logo.png" />
+    <meta property="og:image:alt" content="MJ Gift logo." />
   </head>
   <body>
     <!--
@@ -87,14 +94,6 @@
             <span>Contact</span>
           </a>
         </div>
-
-        <!-- <div class="nav__divider">&nbsp;</div>
-            <div class="nav__language">
-              <a href="#" class="nav__language-choice">EN</a>
-              <span class="nav__language-dash">&nbsp;</span>
-              <span class="nav__language-slash">&#124;</span>
-              <a href="#" class="nav__language-choice">CN</a>
-            </div> -->
       </div>
       <div class="menu" id="menu">
         <div class="menu__btn">
@@ -233,9 +232,6 @@
                 <li class="splide__slide">
                   <img data-splide-lazy="/img/gift/gift17.jpg" alt="gift17" />
                 </li>
-                <!-- <li class="splide__slide">
-                  <img data-splide-lazy="/img/gift/gift18.jpg" alt="gift18" />
-                </li> -->
               </ul>
             </div>
           </div>
@@ -248,19 +244,25 @@
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=9df0MUQ7aDE">
-                  <img src="https://img.youtube.com/vi/9df0MUQ7aDE/sddefault.jpg" />
+                  <img src="https://img.youtube.com/vi/9df0MUQ7aDE/0.jpg" />
                 </li>
                 <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=tOQRjCN_Q64">
-                  <img src="https://img.youtube.com/vi/tOQRjCN_Q64/sddefault.jpg" />
+                  <img src="https://img.youtube.com/vi/tOQRjCN_Q64/0.jpg" />
                 </li>
                 <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=pwQwuKDHWRg">
-                  <img src="https://img.youtube.com/vi/pwQwuKDHWRg/sddefault.jpg" />
+                  <img src="https://img.youtube.com/vi/pwQwuKDHWRg/0.jpg" />
                 </li>
                 <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=kjX4e3Ao8qs">
-                  <img src="https://img.youtube.com/vi/kjX4e3Ao8qs/sddefault.jpg" />
+                  <img src="https://img.youtube.com/vi/kjX4e3Ao8qs/0.jpg" />
                 </li>
                 <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=aW5QLZoLZU8">
-                  <img src="https://img.youtube.com/vi/aW5QLZoLZU8/sddefault.jpg" />
+                  <img src="https://img.youtube.com/vi/aW5QLZoLZU8/0.jpg" />
+                </li>
+                <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=0TKUOtlLTpU">
+                  <img src="https://img.youtube.com/vi/0TKUOtlLTpU/0.jpg" />
+                </li>
+                <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=1-ElJFEg7G8">
+                  <img src="https://img.youtube.com/vi/1-ElJFEg7G8/0.jpg" />
                 </li>
               </ul>
             </div>
@@ -292,16 +294,6 @@
             <use href="img/sprite.svg#icon-instagram1"></use>
           </svg>
         </a>
-        <!-- <a href="#" class="socl-mdia__link">
-          <svg class="socl-mdia__icon">
-            <use href="img/sprite.svg#icon-telegram"></use>
-          </svg>
-        </a>
-        <a href="#" class="socl-mdia__link">
-          <svg class="socl-mdia__icon">
-            <use href="img/sprite.svg#icon-whatsapp"></use>
-          </svg>
-        </a> -->
       </div>
       <div class="created">
         <p class="created__text">
@@ -312,31 +304,7 @@
           in Malaysia
         </p>
       </div>
-      <div class="copyright">&copy; MJ GIFT 2021</div>
+      <div class="copyright">&copy; MJ GIFT</div>
     </footer>
-    <!-- 
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.4.6/dist/js/splide-extension-video.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        new Splide('.splide', {
-          type: 'loop',
-          autoplay: true,
-          interval: 3000,
-          cover: true,
-          width: '60rem',
-          heightRatio: 1,
-        }).mount();
-
-        new Splide('#splide', {
-          type: 'loop',
-          width: '80rem',
-          autoHeight: true,
-          video: {
-            volume: 1,
-          },
-        }).mount(window.splide.Extensions);
-      });
-    </script> -->
   </body>
 </html>

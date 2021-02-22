@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BV14DSJ93W"></script>
@@ -20,8 +20,16 @@
     <script src="https://www.google.com/recaptcha/api.js?render=6LfEYEUaAAAAAJR_DvIaoSATBg9JW2X6f0PCFdRY" defer></script>
     <script src="js/form.js" defer></script>
     <script src="js/index.js" defer></script>
+
     <title>MJ GIFT | MEMORY & JOY</title>
     <meta name="description" content="We help you prepare & deliver your desired gift for your love ones." />
+    <meta name="author" content="Kevin" />
+    <!-- Facebook Open Graph protocol -->
+    <meta property="og:title" content="MJ Gift" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mjgift.herokuapp.com/" />
+    <meta property="og:image" content="https://mjgift.herokuapp.com/img/mjgift-logo.png" />
+    <meta property="og:image:alt" content="MJ Gift logo." />
   </head>
   <body>
     <!--
@@ -82,14 +90,6 @@
             <span>Contact</span>
           </a>
         </div>
-
-        <!-- <div class="nav__divider">&nbsp;</div>
-            <div class="nav__language">
-              <a href="#" class="nav__language-choice">EN</a>
-              <span class="nav__language-dash">&nbsp;</span>
-              <span class="nav__language-slash">&#124;</span>
-              <a href="#" class="nav__language-choice">CN</a>
-            </div> -->
       </div>
       <div class="menu" id="menu">
         <div class="menu__btn">
@@ -166,17 +166,17 @@
         <form action="/enquiry-form" method="POST" id="contact-form__form">
           <div class="contact-form__name">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" />
+            <input type="text" id="name" name="name" required/>
           </div>
           <div class="contact-form__email">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" />
+            <input type="email" id="email" name="email" required/>
           </div>
           <div class="contact-form__msg">
             <label for="msg">Message:</label>
-            <textarea id="msg" name="msg" rows="10" cols="50"></textarea>
+            <textarea id="msg" name="msg" rows="10" cols="50" required></textarea>
           </div>
-          <input type="submit" class="submit" />
+          <button type="submit" class="submit">Send</button>
         </form>
         <div class="submitted submit-success no-display">
           <p>Thank you for your interest. We will response soon.</p>
@@ -210,16 +210,6 @@
             <use href="img/sprite.svg#icon-instagram1"></use>
           </svg>
         </a>
-        <!-- <a href="#" class="socl-mdia__link">
-          <svg class="socl-mdia__icon">
-            <use href="img/sprite.svg#icon-telegram"></use>
-          </svg>
-        </a>
-        <a href="#" class="socl-mdia__link">
-          <svg class="socl-mdia__icon">
-            <use href="img/sprite.svg#icon-whatsapp"></use>
-          </svg>
-        </a> -->
       </div>
       <div class="created">
         <p class="created__text">
@@ -230,7 +220,7 @@
           in Malaysia
         </p>
       </div>
-      <div class="copyright">&copy; MJ GIFT 2021</div>
+      <div class="copyright">&copy; MJ GIFT</div>
     </footer>
   </body>
 </html>

@@ -40,6 +40,7 @@ app.get('/contact', (req, res) => {
   res.status(200).sendFile(`${__dirname}/pages/contact.html`);
 });
 
+// Handle contact form with reCaptcha v3.
 app.post('/enquiry-form', (req, res) => {
   const { name, email, msg, token } = req.body;
 
@@ -60,7 +61,7 @@ app.post('/enquiry-form', (req, res) => {
           to: `${process.env.EMAIL_TO}`, // Change to your recipient
           from: `${process.env.EMAIL_FROM}`, // Change to your verified sender
           subject: `Enquiry from MJ Gift website by ${name}`,
-          text: `Name: ${name}\nEmail: ${email}\nMessage:\n${msg}`,
+          text: `Name: ${name} Email: ${email} Message: ${msg}`,
           html: `<strong>Name:</strong> ${name}\n<strong>Email:</strong> ${email}\n<strong>Message:</strong>\n${msg}`,
         };
         sgMail
@@ -79,7 +80,7 @@ app.post('/enquiry-form', (req, res) => {
       }
     })
     .catch((err) => {
-      console.log(err);
+      console.error(error);
       return res.status(403).json({
         status: 'fail',
       });

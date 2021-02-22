@@ -4,12 +4,31 @@
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  height: 90vh;
+  min-height: 80vh;
   padding: 5rem 10rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
 
-  .delivery-details {
-    margin-top: 2rem;
-    font-size: 2rem;
+  .delivery-container {
+    background-color: rgba(230, 230, 230, 0.555);
+    width: max-content;
+    height: min-content;
+    padding: 2.5rem;
+    border-radius: 25px;
+
+    @media (max-width: 400px) {
+      min-width: 35rem;
+    }
+
+    .delivery-region {
+      font-size: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .delivery-details {
+      margin-top: 2rem;
+      font-size: 2rem;
+    }
   }
 }
